@@ -28,7 +28,7 @@ async function discord(env, path) {
 async function sendToFutPro(env, identity, channels, events) {
   const response = await fetch(env.FUTPRO_ACTIVITY_URL, {
     method: "POST",
-    redirect: "error",
+    redirect: "manual",
     headers: {
       Authorization: `Bearer ${env.FUTPRO_ACTIVITY_KEY}`,
       "Content-Type": "application/json",
